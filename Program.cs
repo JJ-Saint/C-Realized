@@ -3,15 +3,15 @@ using CSostenido.Services;
 using CSostenido.Data;
 
 
-List < Reserve >Reservas = new List<Reserve>(); 
+List < Reserve > Reservas = new List<Reserve>(); 
 
 
-string MainMenu = "1.Users Management \n" +
+string mainMenu = "1.Users Management \n" +
                   "2.Sport Sections Management\n" +
                   "3.Reserves Management \n" +
                   "4.Exit \n";
 
-bool Exit = true;
+bool exit = true;
 
 var context = new AppDbContext();
 var userService = new UserService(context);
@@ -22,11 +22,12 @@ var reserveService = new ReserveService(context);
 
 
 
-while (Exit)
+while (exit)
 {
-    Console.WriteLine(MainMenu);
+    Console.WriteLine(mainMenu);
     Console.WriteLine("What Do You Want?");
     string choose = Console.ReadLine();
+    
 
 
     switch (choose)
@@ -36,8 +37,10 @@ while (Exit)
             Console.WriteLine("A.Edit User \n"+
                               "B.Show All Users \n"+
                               "C.Validate Users \n"+
-                              "D.Add New User \n");
-            string choosing = Console.ReadLine();
+                              "D.Add New User \n"+
+                              "E.Remove User");
+            string choosing = Console.ReadLine().ToUpper();
+            //string chooing = choosing.ToUpper();
             
             switch (choosing)
             {
@@ -51,6 +54,7 @@ while (Exit)
                 {
                     userService.ListUser();
                     Console.ReadLine();
+                    
                     Console.Clear();
                     break;
                 }   
@@ -73,7 +77,16 @@ while (Exit)
                     
                     userService.createUser(nameUser,documentUser,emailUser,phoneNumber);
                     break;
-                }   
+                }
+                case "E":
+                {
+                    Console.WriteLine("All Users Rigth Here");
+                    userService.ListUser();
+                    Console.WriteLine("Write The User Id For Remove");
+                    int idUser = int.Parse(Console.ReadLine());
+                    userService.RemoveUser(idUser);
+                    break;
+                }
             }
             
             
@@ -111,7 +124,7 @@ while (Exit)
         case "4":
         {
             Console.WriteLine("Bye Bye");
-            Exit = false;
+            exit = false; 
             
             break;
         }

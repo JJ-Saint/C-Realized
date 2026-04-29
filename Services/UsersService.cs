@@ -49,12 +49,34 @@ public class UserService
         }
     }
 
+    public void RemoveUser(int UserId)
+    {
+        bool existId = _context.User.Any(u => u.UserId == UserId);
+        if (existId)
+        {
+            var userRemove =  _context.User.FirstOrDefault(u => u.UserId == UserId);
+            _context.User.Remove(userRemove);
+            _context.SaveChanges();
+            Console.WriteLine("Your User Is Removed Correct");
+            
+        }
+
+        else
+        {
+            Console.WriteLine("User Not Found");
+        }
+        
+    }
+    
+    
+
     public void ListUser()
        {
            var user = _context.User.ToList();
            foreach (var users in user)
            {
-               Console.WriteLine(users.NameUser + "" + users.DocumentId);
+               Console.WriteLine("ID        Name         Document             Email               Phone");
+               Console.WriteLine(""+users.UserId+"       "+users.NameUser + "          " + users.DocumentId + "        "  + users.Email +"         "+ users.PhoneNumber);
            }
        }
 

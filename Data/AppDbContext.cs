@@ -14,8 +14,8 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
         options.UseMySql(
-            "server=localhost;port=3306;database=assessment;user=juan;password=Masterdead1!;",
-            ServerVersion.AutoDetect("server=localhost;port=3306;database=assessment;user=juan;password=Masterdead1!;")
+            "server=localhost;port=3307;database=assessment;user=root;password=root;",
+            ServerVersion.AutoDetect("server=localhost;port=3307;database=assessment;user=root;password=root;")
         );
     }
 }

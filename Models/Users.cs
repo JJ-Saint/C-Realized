@@ -7,6 +7,7 @@ public class User
     public string NameUser { get; set; } = string.Empty;
     public string PhoneNumber { get; set; } = string.Empty;
     public string Email { get; set; } = string.Empty;
+    
     public List<Reserve> Reserve {get;set;}= new();
     
 }

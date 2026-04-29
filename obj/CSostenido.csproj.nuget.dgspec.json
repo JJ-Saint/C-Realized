@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/cohorte6/Escritorio/AssessmentC#/CSostenido/CSostenido.csproj": {}
+    "/home/cohorte6/Escritorio/C-Realized/CSostenido.csproj": {}
   },
   "projects": {
-    "/home/cohorte6/Escritorio/AssessmentC#/CSostenido/CSostenido.csproj": {
+    "/home/cohorte6/Escritorio/C-Realized/CSostenido.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/cohorte6/Escritorio/AssessmentC#/CSostenido/CSostenido.csproj",
+        "projectUniqueName": "/home/cohorte6/Escritorio/C-Realized/CSostenido.csproj",
         "projectName": "CSostenido",
-        "projectPath": "/home/cohorte6/Escritorio/AssessmentC#/CSostenido/CSostenido.csproj",
+        "projectPath": "/home/cohorte6/Escritorio/C-Realized/CSostenido.csproj",
         "packagesPath": "/home/cohorte6/.nuget/packages/",
-        "outputPath": "/home/cohorte6/Escritorio/AssessmentC#/CSostenido/obj/",
+        "outputPath": "/home/cohorte6/Escritorio/C-Realized/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/cohorte6/.nuget/NuGet/NuGet.Config"
