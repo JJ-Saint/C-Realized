@@ -67,6 +67,59 @@ public class UserService
         }
         
     }
+
+    public void EditUser(int UuserId)
+    {
+        bool existsId = _context.User.Any(u => u.UserId == UuserId);
+        //bool existsName = _context.User.Any(u => u.NameUser == UserName);
+        
+        if (existsId)
+        {
+            var editUser = _context.User.FirstOrDefault(u => u.UserId == UuserId);
+            Console.WriteLine("Name");
+            string nameUsere = Console.ReadLine();
+            Console.WriteLine("Document");
+            string documentIdUser = Console.ReadLine();
+            if (int.TryParse(documentIdUser, out int resulte))
+            {
+               Console.WriteLine("Continue");
+            }
+            else
+            {
+                Console.WriteLine("ff");
+
+            }
+
+            Console.WriteLine("Phone");
+            string phoneNumberUser = Console.ReadLine();
+            if (int.TryParse(phoneNumberUser, out int resulted))
+            {
+                Console.WriteLine("Continue");
+            }
+            else
+            {
+                Console.WriteLine("ff");
+
+            }
+
+            Console.WriteLine("Email");
+            string emailUserEmail = Console.ReadLine();
+            
+           editUser.NameUser = nameUsere;
+           editUser.DocumentId = resulte;
+           editUser.PhoneNumber = resulted;
+           editUser.Email = emailUserEmail;
+            ;
+            _context.SaveChanges();
+
+
+        }
+        else
+        {
+            Console.WriteLine("User Not Found");
+        }
+
+    }
     
     
 
@@ -80,11 +133,22 @@ public class UserService
            }
        }
 
+        public void ValidUser(int UserIdd)
+        {
+                bool existIdUser = _context.User.Any(u => u.UserId == UserIdd);
+               // bool existId = _context.User.Any<User>(this IEnumerable<User>, Func<User,bool>) (in class Enumerable)
+                if (existIdUser)
+                {
+                    Console.WriteLine("Your User It's In The System");
+                    ListUser();
+                
+                }
 
-   
+                else
+                {
+                    Console.WriteLine("Enter A New User Please,Because The User Doesn't Exists");
+                }
+        
+        }
+    }
 
-    
-    
-
-
-}

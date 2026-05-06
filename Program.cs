@@ -46,7 +46,19 @@ while (exit)
             {
                 case "A":
                 {
-                    
+                   Console.WriteLine("Write The User ID For Edit");
+                   string idWrite = Console.ReadLine();
+
+                   if (int.TryParse(idWrite, out int resulteded))
+                   {
+                       Console.WriteLine("Okay,Let Start");
+                       userService.EditUser(resulteded);
+                   }
+                   else
+                   {
+                       Console.WriteLine("User Doesn't Exissts");
+                   }
+                  
                     
                     break;
                 }   
@@ -60,8 +72,26 @@ while (exit)
                 }   
                 case "C":
                 {
+                    Console.WriteLine("Enter The Id For Validate"); 
+                    string idUs = Console.ReadLine();
+
+                    if (int.TryParse(idUs, out int result))
+                    {
+                        //Console.WriteLine("All Users Rigth Here");
+                        //userService.ListUser();
+                        userService.ValidUser(result);
+                        Console.WriteLine($"The User Identified With { result } ID");
+                    }
+                    else
+                    {
+                        Console.WriteLine("ff");
+
+                    }
                     
                     
+                   
+                    Console.ReadLine();
+                    Console.Clear();
                     break;
                 }   
                 case "D":
@@ -69,7 +99,7 @@ while (exit)
                     Console.WriteLine("Name");
                     string nameUser = Console.ReadLine();
                     Console.WriteLine("Document");
-                    string documentUser = Console.ReadLine();
+                    int documentUser = Console.ReadLine();
                     Console.WriteLine("Email");
                     string emailUser = Console.ReadLine();
                     Console.WriteLine("You Phone Number");

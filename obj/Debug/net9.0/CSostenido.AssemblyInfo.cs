@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSostenido")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6cacab14906de8bba69128094bb66ca08db0c36")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f00843583eb5b3064a93b4d38535ebb61cbbb19")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSostenido")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSostenido")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
